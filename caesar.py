@@ -25,5 +25,12 @@ def caesar_decrypt(encrypted_text, shift):
         else:
             decrypted_text += char
     return decrypted_text
+
 text = input("Введите текст на русском языке, все буквы иных алфавитов будут отсутствовать в ответе: ")
 shift = int(input("Введите шаг сдвига: "))
+
+encrypted_text = caesar_encrypt(text, shift)
+print("Результат зашифровки:", encrypted_text)
+
+decrypted_text = caesar_decrypt(text, shift)
+print("Результат расшифровки:", decrypted_text)
